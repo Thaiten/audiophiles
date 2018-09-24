@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Audiophiles.info</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/header.css">
+    <link rel="stylesheet" href="../resources/css/reviewOverview.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
+    <script>
+      function expandMenu() {
+          var x = document.getElementsByClassName("navigation")[0];
+          if (x.className === "navigation") {
+              x.className += " responsive";
+          } else {
+              x.className = "navigation";
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header block">
+      <div class="logo">
+        <h1>AUDIOPHILES.info</h1>
+      </div>
+      <div class="navigation">
+        <a onclick="expandMenu()" href="javascript:void(0);">Menü</a>
+        <a href="#">Recommandations</a>
+        <a href="#">Headphone Reviews</a>
+        <a href="#">Articles</a>
+        <a href="#">Contact</a>
+      </div>
+      <input type="text" name="" class="search" placeholder="Search...">
+    </div>
+    <div class="content block">
+        <h2>Latest Reviews</h2>
+        <div class="filters">
+          <span class="filterbubble overear">Over-Ear</span>
+          <span class="filterbubble onear">On-Ear</span>
+          <span class="filterbubble inear">In-Ear</span>
+          <span class="filterbubble interface">Interfaces</span>
+        </div>
+        <div class="reviewgrid">
+          <div class="review">
+            <div class="preview" style="border-color: var(--overearcolor);">
+              <img src="../resources/img/dt-770.jpg" alt="">
+            </div>
+            <div class="reviewdetails">
+              <a href="#" class="category">OVER-EAR</a>
+              <a href="#" class="manufacurer">Beyerdynamic</a>
+              <a href="#" class="headphone">DT-770 Pro</a>
+              <!-- <p class="preview-text"> -->
+                <ul>
+                  <li>closed back design</li>
+                  <li>250 ohms</li>
+                  <li>weight without cable: 375g</li>
+                  <li>weight with cable: 287g</li>
+                </ul>
+              <!-- </p> -->
+              <a href="#" class="to-review">TO THE REVIEW!</a>
+            </div>
+          </div>
+          <div class="review">
+            <div class="preview" style="border-color: var(--inearcolor);">
+              <img src="../resources/img/bulletv2.png" alt="">
+            </div>
+            <div class="reviewdetails">
+              <a href="#" class="category">IN-EAR</a>
+              <a href="#" class="manufacurer">OnePlus</a>
+              <a href="#" class="headphone">Bullets V2</a>
+              <!-- <p class="preview-text"> -->
+                <ul>
+                  <li>closed back design</li>
+                  <li>250 ohms</li>
+                  <li>weight without cable: 375g</li>
+                  <li>weight with cable: 287g</li>
+                </ul>
+              <!-- </p> -->
+              <a href="#" class="to-review">TO THE REVIEW!</a>
+            </div>
+          </div>
+          <div class="review">
+            <div class="preview" style="border-color: var(--onearcolor);">
+              <img src="../resources/img/athm50x.jpg" alt="">
+            </div>
+            <div class="reviewdetails">
+              <a href="#" class="category">ON-EAR</a>
+              <a href="#" class="manufacurer">Audio-Technica</a>
+              <a href="#" class="headphone">ATH M50 X</a>
+              <!-- <p class="preview-text"> -->
+                <ul>
+                  <li>closed back design</li>
+                  <li>250 ohms</li>
+                  <li>weight without cable: 375g</li>
+                  <li>weight with cable: 287g</li>
+                </ul>
+              <!-- </p> -->
+              <a href="#" class="to-review">TO THE REVIEW!</a>
+            </div>
+          </div>
+      </div>
+      <div class="pageindicatorContainer">
+        <a href="#" class="pageindicator"><</a>
+        <a href="#" class="pageindicator selected">1</a>
+        <a href="#" class="pageindicator">2</a>
+        <a href="#" class="pageindicator">3</a>
+        ...
+        <a href="#" class="pageindicator">6</a>
+        <a href="#" class="pageindicator">></a>
+      </div>
+    </div>
+    <div class="footer block">
+      <div class="creator-information">
+        <p>&copy; 2018 - AUDIOPHILES.info</p>
+        <a href="https://thaiten.github.io" class="creator">
+          <span class="text">created by Eric Wätke</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-block">
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-block">
+          <a href="#">Become a writer</a>
+          <a href="#">Our Partners</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

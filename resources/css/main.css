@@ -1,0 +1,17 @@
+body{
+  background: #E2E2E2;
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+  scroll-behavior: smooth;
+}
+:root{
+  --overearcolor: #545EEE;
+  --inearcolor: #EEC054;
+  --onearcolor: #EE5454;
+  --interfacecolor: #7C54EE;
+}
+.block{
+  padding: 2em 5%;
+}
+h1, h2{
+  font-family: 'Roboto Slab', serif;
+}

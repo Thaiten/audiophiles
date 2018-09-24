@@ -1,0 +1,56 @@
+.index-list{
+  display: inline-block;
+  padding: 2em 3em 2em 1em;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #00000021;
+}
+.index-list a{
+  color: #000;
+  text-decoration: none;
+}
+.header1 > li{
+  font-weight: bold;
+}
+.headphoneImage{
+float: right;
+height: 400px;
+}
+.text{
+  width: 50%;
+  margin: 10em 25% 0 25%;
+}
+.text img.static, .text iframe.static{
+  border-radius: 0;
+  border: 0;
+  box-shadow: none;
+}
+.text img.zoom-img, .text iframe.zoom-img{
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2), 0 3px 20px rgba(86, 86, 86, 0.15);
+  transition: .3s ease all;
+}
+.zoom-overlay{
+  background: #fffc !important;
+}
+.text img, .text iframe{
+  width: 100%;
+  margin: 40px 0;
+  border: 4px solid white;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 22px;
+}
+@media (max-width: 700px) {
+  .index-list{
+    width: calc(100% - 4em);
+  }
+  .headphoneImage {
+    height: auto;
+    float: initial;
+    width: 50%;
+    margin: 3em 25%;
+  }
+  .text{
+    width: 80%;
+    margin: 0 10%;
+  }
+}
