@@ -1,3 +1,9 @@
+body{
+  transition: .2s ease background;
+}
+body.zoom-overlay-open{
+  background: #bfbfbf;
+}
 .index-list{
   display: inline-block;
   padding: 2em 3em 2em 1em;
@@ -16,7 +22,7 @@
 float: right;
 height: 400px;
 }
-.text{
+.content .text{
   width: 50%;
   margin: 10em 25% 0 25%;
 }
@@ -39,6 +45,34 @@ height: 400px;
   border-radius: 5px;
   box-shadow: rgba(0, 0, 0, 0.08) 0px 10px 22px;
 }
+.back{
+  color: black;
+  display: inline-block;
+  vertical-align: sub;
+}
+.content h2{
+  display: inline-block;
+}
+.weight{
+  display: inline-block;
+  border-bottom: 1px dotted #000;
+}
+.weighttooltip {
+  opacity: 0;
+  width: auto;
+  background-color: white;
+  color: #000;
+  border-radius: 5px;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 0 10px #00000026;
+  padding: 1em;
+  transition: .3s ease opacity;
+}
+.weight:hover + .weighttooltip {
+  opacity: 1;
+}
+
 @media (max-width: 700px) {
   .index-list{
     width: calc(100% - 4em);
