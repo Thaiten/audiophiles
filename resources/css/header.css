@@ -32,6 +32,9 @@
   color: #000;
   margin-left: 5em;
 }
+.navigation a.active{
+  border-bottom: 1px solid black;
+}
 .navigation a:first-child{
   display: none;
 }

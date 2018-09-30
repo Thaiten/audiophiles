@@ -1,3 +1,11 @@
+@keyframes scaleIn {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
 .reviews{
   padding: 3em 5%;
   background-color: #ECECEC;
@@ -10,6 +18,7 @@
   height: 16em;
   transition: .5s ease-out box-shadow;
   grid-gap: 5px;
+  animation: .2s ease-out 0s 1 scaleIn;
 }
 .review:hover{
   box-shadow: 0 0 15px #00000047;
@@ -19,6 +28,9 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 2em;
+}
+figure{
+  margin: 0;
 }
 .preview{
   border-top: 5px solid;
@@ -73,6 +85,9 @@ ul{
   letter-spacing: 1.5px;
   font-size: 10pt;
   margin-bottom: 2em;
+  will-change: background-color;
+  transition: .3s ease background-color, .3s ease box-shadow;
+  cursor: pointer;
 }
 .filterbubble.overear{
   border: 2px solid var(--overearcolor);
@@ -81,6 +96,9 @@ ul{
 .filterbubble.overear.selected{
   background-color: var(--overearcolor);
   color: white;
+  box-shadow: 0 2px 6px #00000014;
+  text-shadow: 0 0 7px #0000008c;
+  transition: .3s ease background-color, .3s ease box-shadow;
 }
 .filterbubble.onear{
   border: 2px solid var(--onearcolor);
@@ -89,6 +107,8 @@ ul{
 .filterbubble.onear.selected{
   background-color: var(--onearcolor);
   color: white;
+  box-shadow: 0 2px 6px #00000014;
+  text-shadow: 0 0 7px #0000008c;
 }
 .filterbubble.inear{
   border: 2px solid var(--inearcolor);
@@ -97,6 +117,8 @@ ul{
 .filterbubble.inear.selected{
   background-color: var(--inearcolor);
   color: white;
+  box-shadow: 0 2px 6px #00000014;
+  text-shadow: 0 0 7px #0000008c;
 }
 .filterbubble.interface{
   border: 2px solid var(--interfacecolor);
@@ -105,6 +127,8 @@ ul{
 .filterbubble.interface.selected{
   background-color: var(--interfacecolor);
   color: white;
+  box-shadow: 0 2px 6px #00000014;
+  text-shadow: 0 0 7px #0000008c;
 }
 
 .pageindicatorContainer{
