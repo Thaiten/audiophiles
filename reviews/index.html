@@ -38,20 +38,21 @@
     <div class="content block">
         <h2>Latest Reviews</h2>
         <div class="filters">
-          <span class="filterbubble overear">Over-Ear</span>
-          <span class="filterbubble onear">On-Ear</span>
-          <span class="filterbubble inear">In-Ear</span>
-          <span class="filterbubble interface">Interfaces</span>
+          <span class="filterbubble overear" onclick="filterCategory('overear')">Over-Ear</span>
+          <span class="filterbubble onear" onclick="filterCategory('onear')">On-Ear</span>
+          <span class="filterbubble inear" onclick="filterCategory('inear')">In-Ear</span>
+          <span class="filterbubble interface" onclick="filterCategory('interface')">Interfaces</span>
         </div>
         <div class="reviewgrid">
-          <div class="review">
+          <figure class="reviewFigure" data-groups='overear' data-date-created="2016-06-09" data-title="DT-770 Pro" onclick="location.href = 'reviews/review';">
+            <div class="review">
             <div class="preview" style="border-color: var(--overearcolor);">
               <img src="../resources/img/dt-770.jpg" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="#" class="category">OVER-EAR</a>
+              <a href="JavaScript:Void(0);" onclick="filterCategory('overear')" class="category">OVER-EAR</a>
               <a href="#" class="manufacurer">Beyerdynamic</a>
-              <a href="#" class="headphone">DT-770 Pro</a>
+              <a href="reviews/review" class="headphone">DT-770 Pro</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -63,14 +64,16 @@
               <a href="#" class="to-review">TO THE REVIEW!</a>
             </div>
           </div>
-          <div class="review">
+          </figure>
+          <figure class="reviewFigure" data-groups='inear' data-date-created="2016-06-09" data-title="Bullets V2" onclick="location.href = 'reviews/review';">
+            <div class="review">
             <div class="preview" style="border-color: var(--inearcolor);">
               <img src="../resources/img/bulletv2.png" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="#" class="category">IN-EAR</a>
+              <a href="JavaScript:Void(0);" onclick="filterCategory('inear')" class="category">IN-EAR</a>
               <a href="#" class="manufacurer">OnePlus</a>
-              <a href="#" class="headphone">Bullets V2</a>
+              <a href="reviews/review" class="headphone">Bullets V2</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -82,14 +85,16 @@
               <a href="#" class="to-review">TO THE REVIEW!</a>
             </div>
           </div>
-          <div class="review">
+          </figure>
+          <figure class="reviewFigure" data-groups='onear' data-date-created="2016-06-09" data-title="ATH M50 X" onclick="location.href = 'reviews/review';">
+            <div class="review">
             <div class="preview" style="border-color: var(--onearcolor);">
               <img src="../resources/img/athm50x.jpg" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="#" class="category">ON-EAR</a>
-              <a href="#" class="manufacurer">Audio-Technica</a>
-              <a href="#" class="headphone">ATH M50 X</a>
+              <a href="JavaScript:Void(0);" onclick="filterCategory('onear')" class="category">ON-EAR</a>
+              <a href="reviews/" class="manufacurer">Audio-Technica</a>
+              <a href="reviews/review" class="headphone">ATH M50 X</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -101,6 +106,8 @@
               <a href="#" class="to-review">TO THE REVIEW!</a>
             </div>
           </div>
+          </figure>
+          <div class="col-1@sm my-sizer-element"></div>
       </div>
       <div class="pageindicatorContainer">
         <a href="#" class="pageindicator"><</a>
@@ -133,5 +140,33 @@
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      function filterCategory(category){
+        var bubble = document.getElementsByClassName("filterbubble "+category)[0];
+         if (bubble.classList.contains("selected")) {
+           bubble.classList.remove("selected");
+           for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {
+             var review = document.getElementsByClassName("reviewFigure")[i];
+             review.style.display = "grid";
+           }
+         }
+         else {
+           for (var i = 0; i < document.getElementsByClassName("selected").length; i++) {
+             document.getElementsByClassName("selected")[i].classList.remove("selected");
+           }
+           for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {
+             var review = document.getElementsByClassName("reviewFigure")[i];
+             var group = (review.dataset.groups);
+             if (group != category) {
+               review.style.display = 'none';
+             }
+             else {
+               review.style.display = 'grid';
+             }
+           }
+           bubble.classList.add("selected");
+         }
+      }
+    </script>
   </body>
 </html>
