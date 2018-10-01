@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
     <meta name="theme-color" content="#E2E2E2">
+    <script src="../resources/js/shuffle.min.js" charset="utf-8"></script>
     <script>
       function expandMenu() {
           var x = document.getElementsByClassName("navigation")[0];
@@ -28,10 +29,10 @@
       </div>
       <div class="navigation">
         <a onclick="expandMenu()" href="javascript:void(0);">Menü</a>
-        <a href="#">Recommandations</a>
-        <a href="reviews/index.html">Headphone Reviews</a>
-        <a href="#">Articles</a>
-        <a href="#">Contact</a>
+        <a href="recommandations/">Recommandations</a>
+        <a href="reviews/">Headphone Reviews</a>
+        <a href="articles/">Articles</a>
+        <a href="contact/">Contact</a>
       </div>
       <input type="text" name="" class="search" placeholder="Search...">
     </div>
@@ -39,14 +40,14 @@
       <div class="reviews block">
         <h2>Latest Reviews</h2>
         <div class="reviewgrid">
-          <div class="review">
+          <div class="review" onclick="location.href = 'reviews/review';">
             <div class="preview" style="border-color: var(--overearcolor);">
               <img src="resources/img/dt-770.jpg" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="#" class="category">OVER-EAR</a>
+              <a href="reviews/?category=overear" class="category">OVER-EAR</a>
               <a href="#" class="manufacurer">Beyerdynamic</a>
-              <a href="#" class="headphone">DT-770 Pro</a>
+              <a href="reviews/review" class="headphone">DT-770 Pro</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -58,14 +59,14 @@
               <a href="#" class="to-review">TO THE REVIEW!</a>
             </div>
           </div>
-          <div class="review">
+          <div class="review" onclick="location.href = 'reviews/review';">
             <div class="preview" style="border-color: var(--inearcolor);">
               <img src="resources/img/bulletv2.png" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="#" class="category">IN-EAR</a>
+              <a href="reviews/?category=overear" class="category">IN-EAR</a>
               <a href="#" class="manufacurer">OnePlus</a>
-              <a href="#" class="headphone">Bullets V2</a>
+              <a href="reviews/review" class="headphone">Bullets V2</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -82,7 +83,7 @@
               <img src="resources/img/athm50x.jpg" alt="">
             </div>
             <div class="reviewdetails">
-              <a href="reviews/" class="category">ON-EAR</a>
+              <a href="reviews/?category=overear" class="category">ON-EAR</a>
               <a href="reviews/" class="manufacurer">Audio-Technica</a>
               <a href="reviews/review" class="headphone">ATH M50 X</a>
               <!-- <p class="preview-text"> -->
@@ -96,7 +97,7 @@
               <a href="#" class="to-review">TO THE REVIEW!</a>
             </div>
           </div>
-
+          <div class="col-1@sm my-sizer-element"></div>
           <a href="reviews/" id="more-reviews">SHOW MORE REVIEWS</a>
         </div>
 
@@ -136,5 +137,6 @@
         </div>
       </div>
     </div>
+
   </body>
 </html>

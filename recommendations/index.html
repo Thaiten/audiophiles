@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Audiophiles.info</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/header.css">
+    <link rel="stylesheet" href="../resources/css/recommendations.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
+    <meta name="theme-color" content="#E2E2E2">
+    <script>
+      function expandMenu() {
+          var x = document.getElementsByClassName("navigation")[0];
+          if (x.className === "navigation") {
+              x.className += " responsive";
+          } else {
+              x.className = "navigation";
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header block">
+      <div class="logo">
+        <a href="../"><h1>AUDIOPHILES.info</h1></a>
+      </div>
+      <div class="navigation">
+        <a onclick="expandMenu()" href="javascript:void(0);">Menü</a>
+        <a href="#" class="active">Recommandations</a>
+        <a href="/reviews/">Headphone Reviews</a>
+        <a href="/articles/">Articles</a>
+        <a href="/contact/">Contact</a>
+      </div>
+      <input type="text" name="" class="search" placeholder="Search...">
+    </div>
+    <div class="content block">
+        <h2>Recommendations</h2>
+
+        <div class="recommendation inear">
+          <div class="">
+            <a href="#" class="category">OVER-EAR</a>
+            <a href="#" class="manufacurer">Beyerdynamic</a>
+            <a href="#" class="headphone">DT-770 Pro</a>
+            <div class="">
+              <p class="price">~25 €</p>
+              <a href="#" class="amazonlink">Shop now at <img src="../resources/svg/amazon.svg" alt="" class="amazonlogo"> </a>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>Maecenas tellus est, dignissim at scelerisque vel, lacinia sit amet tortor. Vivamus ut quam felis. Integer ornare scelerisque purus quis fringilla. In facilisis quis mi a porttitor. Proin efficitur rhoncus orci, id dictum orci consequat et. Aenean iaculis rhoncus purus, at congue ipsum ullamcorper nec. Proin at sagittis nibh, id porta enim.
+<br><br>
+Nam ac tincidunt purus. Suspendisse non iaculis nulla. Nunc et fringilla nibh. Nam sit amet dui ac mauris tempor vestibulum. Praesent pulvinar leo dui, nec eleifend mi eleifend eget. Integer at dui eget enim congue scelerisque. Nam ornare dapibus erat. Integer at quam non ipsum maximus bibendum id a tellus. Aliquam aliquet, ipsum eget accumsan viverra, tortor velit fermentum ligula, ac mattis nulla ex et diam. Mauris vehicula turpis metus, eget pulvinar tellus posuere quis.</p>
+          </div>
+          <img src="../resources/img/bulletv2.png" alt="">
+        </div>
+
+    </div>
+    <div class="footer block">
+      <div class="creator-information">
+        <p>&copy; 2018 - AUDIOPHILES.info</p>
+        <a href="https://thaiten.github.io" class="creator">
+          <span class="text">created by Eric Wätke</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-block">
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-block">
+          <a href="#">Become a writer</a>
+          <a href="#">Our Partners</a>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

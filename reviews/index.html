@@ -52,7 +52,7 @@
             <div class="reviewdetails">
               <a href="JavaScript:Void(0);" onclick="filterCategory('overear')" class="category">OVER-EAR</a>
               <a href="#" class="manufacurer">Beyerdynamic</a>
-              <a href="reviews/review" class="headphone">DT-770 Pro</a>
+              <a href="review/" class="headphone">DT-770 Pro</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -73,7 +73,7 @@
             <div class="reviewdetails">
               <a href="JavaScript:Void(0);" onclick="filterCategory('inear')" class="category">IN-EAR</a>
               <a href="#" class="manufacurer">OnePlus</a>
-              <a href="reviews/review" class="headphone">Bullets V2</a>
+              <a href="review/" class="headphone">Bullets V2</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -94,7 +94,7 @@
             <div class="reviewdetails">
               <a href="JavaScript:Void(0);" onclick="filterCategory('onear')" class="category">ON-EAR</a>
               <a href="reviews/" class="manufacurer">Audio-Technica</a>
-              <a href="reviews/review" class="headphone">ATH M50 X</a>
+              <a href="review/" class="headphone">ATH M50 X</a>
               <!-- <p class="preview-text"> -->
                 <ul>
                   <li>closed back design</li>
@@ -141,13 +141,17 @@
       </div>
     </div>
     <script type="text/javascript">
+      var x = document.createElement("img");x.src = "../resources/svg/x.svg";x.className = "filterbubblex";
       function filterCategory(category){
         var bubble = document.getElementsByClassName("filterbubble "+category)[0];
          if (bubble.classList.contains("selected")) {
            bubble.classList.remove("selected");
+           bubble.removeChild(x);
            for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {
              var review = document.getElementsByClassName("reviewFigure")[i];
              review.style.display = "grid";
+             review.classList.add("animated");
+             setTimeout(function(){ for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {document.getElementsByClassName("reviewFigure")[i].classList.remove("animated");}}, 200);
            }
          }
          else {
@@ -162,9 +166,12 @@
              }
              else {
                review.style.display = 'grid';
+               review.classList.add("animated");
+               setTimeout(function(){ for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {document.getElementsByClassName("reviewFigure")[i].classList.remove("animated");}}, 200);
              }
            }
            bubble.classList.add("selected");
+           bubble.appendChild(x);
          }
       }
     </script>
