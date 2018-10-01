@@ -160,13 +160,16 @@ vertical-align: text-top;
   .reviewFigure:nth-child(even){
     grid-column: 3/5;
   }
+  .review{
+    grid-gap: 0;
+  }
 }
 @media (max-width: 800px) {
   .reviewFigure:nth-child(even) .review,.reviewFigure:nth-child(odd) .review{
     /* grid-column: 1/5; */
     height: auto;
   }
-  .reviewFigure{
+  .preview{
     grid-column: 1/3;
     padding: 1em 10% 0 10%;
   }

@@ -143,6 +143,9 @@ ul{
   #more-reviews{
     grid-column: 2/4;
   }
+  .review{
+    grid-gap: 0;
+  }
 }
 @media (max-width: 800px) {
   .review:nth-child(even),.review:nth-child(odd){
