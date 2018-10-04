@@ -1,0 +1,41 @@
+label, input, textarea{
+  display: block;
+}
+label{
+  margin: 0 0 8px 0;
+}
+input{
+  margin: 0 0 24px 0;
+  width: calc(20% - 2em);
+  padding: 1em 1.5em;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 11px #00000014;
+}
+input::placeholder, textarea::placeholder{
+  letter-spacing: 3px;
+  color: #545454;
+  text-transform: uppercase;
+}
+.navigation input{
+  margin: 0;
+}
+textarea{
+  padding: 1em;
+  border: 0;
+  border-radius: 5px;
+  box-shadow: 0 1px 11px #00000014;
+  min-width: 20%;
+  max-width: 100%;
+  min-height: 50px;
+}
+input[type=submit]{
+  background: #111;
+  color: white;
+  font-weight: 500;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  width: auto;
+  margin: 2em 0;
+  cursor: pointer;
+}

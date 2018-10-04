@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Contact - Audiophiles.info</title>
+    <link rel="stylesheet" href="../resources/css/main.css">
+    <link rel="stylesheet" href="../resources/css/header.css">
+    <link rel="stylesheet" href="../resources/css/contact.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
+    <meta name="theme-color" content="#E2E2E2">
+    <script>
+      function expandMenu() {
+          var x = document.getElementsByClassName("navigation")[0];
+          if (x.className === "navigation") {
+              x.className += " responsive";
+          } else {
+              x.className = "navigation";
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="header block">
+      <div class="logo">
+        <a href="../"><h1>AUDIOPHILES.info</h1></a>
+      </div>
+      <div class="navigation">
+        <a onclick="expandMenu()" href="javascript:void(0);">Menu</a>
+        <a href="../recommendations/">Recommendations</a>
+        <a href="../reviews/">Headphone Reviews</a>
+        <a href="../artices/">Articles</a>
+        <a href="#" class="active">Contact</a>
+      </div>
+      <input type="text" name="" class="search" placeholder="Search...">
+    </div>
+    <div class="content block">
+        <h2>Contact</h2>
+        <h3>Become a writer</h3>
+
+        <form class="" action="index.html" method="post">
+          <label for="name">Tell us your name:</label>
+          <input type="text" name="name" placeholder="John Doe">
+          <label for="email">How can we reach you?</label>
+          <input type="email" name="name" placeholder="john@doe.com">
+          <label for="text">Why are you a good fit to our team?</label>
+          <textarea name="text" rows="8" cols="80" placeholder="I love headphones because..."></textarea>
+          <input type="submit" name="submit" value="Start sharing your experiences!">
+        </form>
+
+    </div>
+    <div class="footer block">
+      <div class="creator-information">
+        <p>&copy; 2018 - AUDIOPHILES.info</p>
+        <a href="https://thaiten.github.io" class="creator">
+          <span class="text">created by Eric Wätke</span>
+          <span class="line -right"></span>
+          <span class="line -top"></span>
+          <span class="line -left"></span>
+          <span class="line -bottom"></span>
+        </a>
+      </div>
+      <div class="footer-links">
+        <div class="footer-block">
+          <a href="#">Privacy Policy</a>
+        </div>
+        <div class="footer-block">
+          <a href="#">Become a writer</a>
+          <a href="#">Our Partners</a>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript">
+      var x = document.createElement("img");x.src = "../resources/svg/x.svg";x.className = "filterbubblex";
+      function filterCategory(category){
+        var bubble = document.getElementsByClassName("filterbubble "+category)[0];
+         if (bubble.classList.contains("selected")) {
+           bubble.classList.remove("selected");
+           bubble.removeChild(x);
+           for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {
+             var review = document.getElementsByClassName("reviewFigure")[i];
+             review.style.display = "grid";
+             review.classList.add("animated");
+             setTimeout(function(){ for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {document.getElementsByClassName("reviewFigure")[i].classList.remove("animated");}}, 200);
+           }
+         }
+         else {
+           for (var i = 0; i < document.getElementsByClassName("selected").length; i++) {
+             document.getElementsByClassName("selected")[i].classList.remove("selected");
+           }
+           for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {
+             var review = document.getElementsByClassName("reviewFigure")[i];
+             var group = (review.dataset.groups);
+             if (group != category) {
+               review.style.display = 'none';
+             }
+             else {
+               review.style.display = 'grid';
+               review.classList.add("animated");
+               setTimeout(function(){ for (var i = 0; i < document.getElementsByClassName("reviewFigure").length; i++) {document.getElementsByClassName("reviewFigure")[i].classList.remove("animated");}}, 200);
+             }
+           }
+           bubble.classList.add("selected");
+           bubble.appendChild(x);
+         }
+      }
+    </script>
+  </body>
+</html>
