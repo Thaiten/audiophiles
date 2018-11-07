@@ -1,20 +1,34 @@
 .reviews{
   padding: 3em 5%;
-  background-color: #ECECEC;
+  background-color: var(--first);
+}
+.reviews h2{
+  color: var(--second);
 }
 .review{
   background: #fff;
   display: grid;
   grid-template-columns: 40% 60%;
-  box-shadow: 0 0 15px #0000001f;
+  box-shadow: 0 15px 35px rgba(50, 65, 93, 0.1), 0 5px 15px rgba(0,0,0,.07);
   height: 16em;
-  transition: .5s ease-out box-shadow;
+  transition: .5s ease-out box-shadow, .5s ease-out transform;
   grid-gap: 5px;
   cursor: pointer;
+  color: var(--third);
+  border-radius: 4px;
+  overflow: hidden;
 }
 .review:hover{
-  box-shadow: 0 0 15px #00000047;
-  transition: .5s ease box-shadow;
+  box-shadow: 0 18px 35px rgba(50,65,93,.1), 0 8px 15px rgba(0,0,0,.07);
+  transition: .5s ease box-shadow, .5 ease transform;
+  transform: translateY(-2px);
+}
+.review:hover .preview img{
+  transform: scale(1.01);
+  transition: .5s ease transform;
+}
+.review a{
+  color: var(--third);
 }
 .reviewgrid{
   display: grid;
@@ -29,6 +43,7 @@
 }
 .preview img{
   width: 100%;
+  transition: .5s ease-out transform;
 }
 .reviewdetails{
   display: inline-block;
@@ -42,24 +57,22 @@ a.category {
 }
 a.manufacurer{
   display: block;
-  color: black;
   text-decoration: none;
   font-size: 17pt;
 }
 a.headphone{
   display: block;
-  color: black;
   text-decoration: none;
   margin: 0;
   font-size: 25pt;
   font-weight: normal;
 }
 a.to-review {
-    color: #000;
-    text-decoration: none;
-    text-align: center;
-    display: block;
-    letter-spacing: 3px;
+  color: var(--third);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  letter-spacing: 3px;
 }
 ul{
   font-size: 10pt;
@@ -68,67 +81,135 @@ ul{
 }
 #more-reviews{
   text-decoration: none;
-  color: black;
-  background: #fff;
+  color: var(--second);
   padding: 1em;
-  border-radius: 5px;
-  display: inline-block;
-  box-shadow: 0 2px 8px #0000001f;
   grid-column: 2;
   text-align: center;
-  transition: .3s ease box-shadow;
-  will-change: box-shadow;
+  transition: .3s ease text-shadow;
+  will-change: text-shadow;
+  font-weight: 500;
+  letter-spacing: 15px;
 }
 #more-reviews:hover{
-  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
-  transition: .3s ease box-shadow;
+  text-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  transition: .3s ease text-shadow;
 }
 
 .article{
   background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 13px #0000001f;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   display: grid;
   grid-template-columns: 15% 85%;
-  color: #000;
+  color: var(--third);
   text-decoration: none;
+}
+.article .continue {
+  background: var(--first);
+  position: absolute;
+  width: 0em;
+  color: var(--second);
+  transition: .3s ease width;
+  overflow: hidden;
+  right: 5%;
+  margin-top: 8em;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(50, 65, 93, 0.1), 0 5px 11px rgba(0,0,0,.07);
+}
+.article:hover .continue {
+  width: 23em;
+  transition: .3s ease width;
+}
+.article .continue p{
+  padding: 1em 4em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 14pt;
+  margin: 0;
 }
 .article img{
   width: 100%;
+}
+.articledetails{
+  padding: 2em;
 }
 .cta-container{
   width: 100%;
   text-align: center;
 }
-.continue-reading{
+
+
+
+
+
+.bestreview{
+  background: var(--first);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 0 15px 35px rgba(50, 65, 93, 0.1), 0 5px 15px rgba(0,0,0,.07);
+  height: 16em;
+  transition: .5s ease-out box-shadow, .5s ease-out transform;
+  grid-gap: 5px;
+  cursor: pointer;
+  color: var(--second);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bestreview h3{
+  font-size: 22pt;
+}
+.bestreview:hover{
+  box-shadow: 0 18px 35px rgba(50,65,93,.1), 0 8px 15px rgba(0,0,0,.07);
+  transition: .5s ease box-shadow, .5 ease transform;
+  transform: translateY(-2px);
+}
+.bestreview:hover .bestpreview img{
+  transform: scale(0.95);
+  transition: 1s ease transform;
+}
+.bestreview a{
+  color: var(--second);
+}
+.bestgrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+.bestpreview{
+  padding-top: 3em;
+  max-height: calc(16em - 3em);
+  overflow: hidden;
+}
+.bestpreview img{
+  width: 100%;
+  transition: 1s ease-out transform;
+  transform: scale(0.9);
+}
+.bestreviewdetails{
   display: inline-block;
-  letter-spacing: 4px;
-  position: relative;
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-  will-change: transform;
+  padding: 2em;
 }
-.continue-reading svg{
-  position: absolute;
-  width: 1.5em;
-  right: 0px;
-  right: 0rem;
-  opacity: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-  will-change: right, opacity;
+#more-recommendations{
+  text-decoration: none;
+  color: var(--third);
+  padding: 1em;
+  grid-column: 2;
+  text-align: center;
+  transition: .3s ease text-shadow;
+  will-change: text-shadow;
+  font-weight: 500;
+  letter-spacing: 15px;
 }
-.article:hover .continue-reading svg{
-  opacity: 1;
-  right: -2rem;
+#more-recommendations:hover{
+  text-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
+  transition: .3s ease text-shadow;
 }
-.article:hover .continue-reading {
-    -webkit-transform: translate3d(-1rem, 0, 0);
-    transform: translate3d(-1rem, 0, 0);
-}
+
+
+
+
 
 @media (max-width: 1300px) {
   .reviewgrid{

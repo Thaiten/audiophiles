@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../resources/css/article.css">
     <link rel="stylesheet" href="../../resources/css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <meta content='width=device-width, initial-scale=1.0, maximum-scale=2.0, user-scalable=1' name='viewport' />
     <meta name="theme-color" content="#E2E2E2">
     <script>
@@ -22,7 +23,9 @@
     </script>
   </head>
   <body>
-
+    <div id="Reading-progress">
+          <span id="Progress-bar" class="bar"></span>
+        </div>
     <div class="header block">
       <div class="logo">
         <a href="../../"><h1>AUDIOPHILES.info</h1></a>
@@ -37,12 +40,12 @@
       <input type="text" name="" class="search" placeholder="Search...">
     </div>
     <div class="content block">
-        <a href="../" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="M15 18l-6-6 6-6"/></svg></a><h2>Articles</h2>
-        <h3 id="sound-quality">Brand X released new Item</h3>
+        <a href="../" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="M15 18l-6-6 6-6"/></svg></a><h2>Articles</h2><br>
+        <h2 id="article-header">Brand X released new Item</h2>
         <img src="../../resources/img/dt-770.png" class="articleImage">
         <div class="text">
 
-          <h4>Header 2</h4>
+          <h3>Header 2</h3>
           <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque varius dapibus justo. Suspendisse eget mauris lacus. Vivamus dapibus at enim quis elementum. Proin eleifend eu lorem nec malesuada. Curabitur placerat enim leo, in dignissim mauris iaculis ac. Nulla sed arcu est. Aenean venenatis metus eget tortor pharetra rutrum. Duis varius tincidunt massa, eu porta nunc viverra ac. Nulla quis augue eget nulla feugiat tristique quis at augue. Nam lorem leo, molestie porta iaculis sit amet, euismod ac leo. Nam tellus erat, bibendum vel tempor a, facilisis vel nisi. Donec venenatis velit cursus erat consequat commodo. Etiam vel elementum arcu. Nam quis aliquam lectus, in luctus turpis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque ac velit ac lacus pharetra interdum id eu arcu.</p><p>
 Pellentesque consequat accumsan justo, sit amet placerat sapien mattis a. Phasellus vehicula consectetur facilisis. Nam ac tortor vitae augue imperdiet venenatis. Vestibulum suscipit nec leo quis consectetur. Suspendisse et ornare risus. Praesent eu erat nec tortor volutpat tempor et quis lectus. Aliquam urna metus, fermentum vel tristique at, posuere sed leo. Maecenas at bibendum erat. Aenean tempor nunc ac lectus vehicula lobortis id at purus. Ut sollicitudin laoreet semper. Donec porttitor sit amet tortor nec imperdiet. Quisque augue ligula, fermentum vitae mattis hendrerit, posuere a massa.
 Phasellus sagittis metus et nisl lobortis, et rhoncus tellus gravida. Quisque sit amet eros pharetra, vulputate augue quis, imperdiet purus. Proin luctus justo vel augue feugiat dapibus. Etiam lacus odio, fringilla vestibulum molestie non, dignissim quis urna. Proin id tincidunt libero, eu dictum sem. Morbi ipsum tellus, euismod ac tempor id, maximus vel lacus. Vivamus consequat a urna nec lobortis. Sed id sem non nisl ultricies tempus et et tortor. Sed quis tortor hendrerit, sodales ex tincidunt, lacinia ante. Quisque dictum luctus viverra. Quisque turpis augue, accumsan quis bibendum ut, convallis et neque. Mauris in aliquam neque. Mauris id neque sed ante tempor placerat. Donec quis convallis nisi.
@@ -74,6 +77,16 @@ Etiam vel hendrerit est. Nulla dignissim, neque nec sagittis placerat, eros lore
         </div>
       </div>
     </div>
+    <script type="text/javascript">
+      window.addEventListener('scroll', function(e) {
+        var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        var body = document.body;
+        var html = document.documentElement;
+        var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+        var c = window.innerHeight;
+        var position = (s / (d - c)) * 100;
+        document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
+      });
+    </script>
   </body>
-
 </html>

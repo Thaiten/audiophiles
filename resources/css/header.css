@@ -1,5 +1,6 @@
 .logo{
   display: inline-block;
+  color: var(--first);
 }
 .search{
   display: block;
@@ -29,11 +30,14 @@
 }
 .navigation a{
   text-decoration: none;
-  color: #000;
+  color: var(--third);
   margin-left: 5em;
 }
 .navigation a.active{
-  border-bottom: 1px solid black;
+  background: var(--first);
+  color: var(--second);
+  padding: 0.75em 2em;
+  border-radius: 4px;
 }
 .navigation a:first-child{
   display: none;

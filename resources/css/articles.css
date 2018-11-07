@@ -1,49 +1,39 @@
 .article{
   background: #fff;
-  border-radius: 6px;
-  box-shadow: 0 0 13px #0000001f;
+  border-radius: 4px;
+  box-shadow: 0 15px 35px rgba(50,50,93,.1), 0 5px 15px rgba(0,0,0,.07);
   display: grid;
   grid-template-columns: 15% 85%;
-  color: #000;
+  color: var(--third);
   text-decoration: none;
-  padding-top: 1em;
 }
 .article img{
   width: 100%;
 }
-.cta-container{
-  width: 100%;
-  text-align: center;
-  padding-bottom: 2em;
-}
-.continue-reading{
-  display: inline-block;
-  letter-spacing: 4px;
-  position: relative;
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-  will-change: transform;
-}
-.continue-reading svg{
+.article .continue {
+  background: var(--first);
   position: absolute;
-  width: 1.5em;
-  right: 0px;
-  right: 0rem;
-  opacity: 0;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  -webkit-transition: all 300ms ease-out;
-  transition: all 300ms ease-out;
-  will-change: right, opacity;
+  width: 0em;
+  color: var(--second);
+  transition: .3s ease width;
+  overflow: hidden;
+  right: 5%;
+  margin-top: 8em;
+  border-bottom-left-radius: 4px;
+  border-top-left-radius: 4px;
+  white-space: nowrap;
+  box-shadow: 0 10px 26px rgba(50, 65, 93, 0.1), 0 5px 11px rgba(0,0,0,.07);
 }
-.article:hover .continue-reading svg{
-  opacity: 1;
-  right: -2rem;
+.article:hover .continue {
+  width: 23em;
+  transition: .3s ease width;
 }
-.article:hover .continue-reading {
-    -webkit-transform: translate3d(-1rem, 0, 0);
-    transform: translate3d(-1rem, 0, 0);
+.article .continue p{
+  padding: 1em 4em;
+  font-weight: 600;
+  letter-spacing: 2px;
+  font-size: 14pt;
+  margin: 0;
 }
 .pageindicatorContainer{
   text-align: center;

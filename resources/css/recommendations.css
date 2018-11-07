@@ -67,7 +67,57 @@ a.headphone{
   display: grid;
   align-items: center;
 }
-
+.bestreview{
+  background: var(--first);
+  display: grid;
+  grid-template-columns: 40% 60%;
+  box-shadow: 0 15px 35px rgba(50, 65, 93, 0.1), 0 5px 15px rgba(0,0,0,.07);
+  height: 16em;
+  transition: .5s ease-out box-shadow, .5s ease-out transform;
+  grid-gap: 5px;
+  cursor: pointer;
+  color: var(--second);
+  border-radius: 4px;
+  overflow: hidden;
+}
+.bestreview h3{
+  font-size: 22pt;
+}
+.bestreview:hover{
+  box-shadow: 0 18px 35px rgba(50,65,93,.1), 0 8px 15px rgba(0,0,0,.07);
+  transition: .5s ease box-shadow, .5 ease transform;
+  transform: translateY(-2px);
+}
+.bestreview:hover .bestpreview img{
+  transform: scale(0.95);
+  transition: 1s ease transform;
+}
+.bestreview a{
+  color: var(--second);
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  letter-spacing: 3px;
+}
+.bestgrid{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2em;
+}
+.bestpreview{
+  padding-top: 3em;
+  max-height: calc(16em - 3em);
+  overflow: hidden;
+}
+.bestpreview img{
+  width: 100%;
+  transition: 1s ease-out transform;
+  transform: scale(0.9);
+}
+.bestreviewdetails{
+  display: inline-block;
+  padding: 2em;
+}
 @media (max-width: 800px) {
 .text-container, .information{
   grid-column: 1/3;
