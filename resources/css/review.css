@@ -4,16 +4,25 @@ body{
 body.zoom-overlay-open{
   background: #bfbfbf;
 }
-.index-list{
+.index-list {
   display: inline-block;
-  padding: 2em 3em 2em 1em;
-  background: #fff;
+  padding: 2em 3em;
+  background: var(--first);
+  color: var(--second) !important;
   border-radius: 10px;
-  box-shadow: 0 0 10px #00000021;
+  box-shadow: 0 15px 35px rgba(50, 65, 93, 0.1), 0 5px 15px rgba(0,0,0,.07);
+  margin-left: 10%;
 }
 .index-list a{
-  color: #000;
+  color: var(--second);
   text-decoration: none;
+}
+.index-list ul{
+  padding-left: 16px;
+}
+.index-list h3{
+  text-align: center;
+  margin-top: 0;
 }
 .header1 > li{
   font-weight: bold;
@@ -22,9 +31,14 @@ body.zoom-overlay-open{
 float: right;
 height: 400px;
 }
-.content .text{
-  width: 50%;
-  margin: 10em 25% 0 25%;
+.content  .text{
+  width: 40%;
+  margin: 3em 40% 0 10%;
+  line-height: 1.4;
+  text-align: justify;
+}
+.text p{
+  font-family: 'Alegreya', serif;
 }
 .text img.static, .text iframe.static{
   border-radius: 0;
@@ -60,19 +74,47 @@ height: 400px;
 .weighttooltip {
   opacity: 0;
   width: auto;
-  background-color: white;
-  color: #000;
+  background-color: var(--first);
+  color: var(--second);
   border-radius: 5px;
   position: absolute;
   z-index: 1;
-  box-shadow: 0 0 10px #00000026;
-  padding: 1em;
+  box-shadow: 0 15px 35px rgba(50, 65, 93, 0.1), 0 5px 15px rgba(0,0,0,.07);
+  padding: 2em;
   transition: .3s ease opacity;
+  font-family: system, -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto", "Segoe UI", "Helvetica Neue", "Lucida Grande", sans-serif;
+}
+.weighttooltip ul{
+  margin-bottom: 0;
+  padding-left: 16px;
+  list-style-type: circle;
 }
 .weight:hover + .weighttooltip {
   opacity: 1;
 }
-
+#article-header{
+  color: var(--first);
+  display: block;
+  text-align: center;
+  font-size: 23pt;
+}
+#Reading-progress {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  height: 2px;
+  margin: 0px;
+  left: 0px;
+  z-index: 99;
+}
+.bar {
+  height: 2px;
+  background: var(--first);
+  position: fixed;
+  top: 0px;
+  z-index: 99;
+  box-shadow: var(--first) 0 0px 10px;
+}
 @media (max-width: 700px) {
   .index-list{
     width: calc(100% - 4em);

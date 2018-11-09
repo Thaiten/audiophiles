@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../../resources/css/review.css">
     <link rel="stylesheet" href="../../resources/css/footer.css">
     <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Alegreya" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" charset="utf-8"></script>
     <script src="../../resources/js/zoom.js" charset="utf-8"></script>
     <script src="../../resources/js/transition.js" charset="utf-8"></script>
@@ -25,7 +26,9 @@
     </script>
   </head>
   <body>
-
+    <div id="Reading-progress">
+      <span id="Progress-bar" class="bar"></span>
+    </div>
     <div class="header block">
       <div class="logo">
         <a href="../.../"><h1>AUDIOPHILES.info</h1></a>
@@ -40,10 +43,11 @@
       <input type="text" name="" class="search" placeholder="Search...">
     </div>
     <div class="content block">
-      <a href="../" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="M15 18l-6-6 6-6"/></svg></a>
-        <h2>Beyerdynamic DT 770 Pro</h2>
-        <h3>Overview</h3>
+      <a href="../" class="back"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-chevron-left"><path d="M15 18l-6-6 6-6"/></svg><h2>Reviews</h2></a>
+        <h2 id="article-header">Beyerdynamic DT 770 Pro</h2>
+        
         <div class="index-list">
+          <h3>Overview</h3>
           <ol class="header1">
             <li><a href="#build-quality">Build Quality</a></li>
             <ol>
@@ -115,4 +119,13 @@ Everything is switchable, so if you'd like to change your earpads to leather, th
     }
   }
   convertWeights();
+  window.addEventListener('scroll', function(e) {
+    var s = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    var body = document.body;
+    var html = document.documentElement;
+    var d = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+    var c = window.innerHeight;
+    var position = (s / (d - c)) * 100;
+    document.getElementById('Progress-bar').setAttribute('style', 'width: ' + position + '%');
+  });
 </script>
