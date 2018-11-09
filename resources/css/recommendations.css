@@ -118,12 +118,49 @@ a.headphone{
   display: inline-block;
   padding: 2em;
 }
+@media (max-width: 1300px) {
+  .bestgrid{
+        grid-template-columns: repeat(4, 1fr);
+  }
+  .bestreview:nth-child(odd){
+    grid-column: 1/3;
+  }
+  .bestreview:nth-child(even){
+    grid-column: 3/5;
+  }
+  #more-recommendations{
+    grid-column: 2/4;
+  }
+  .bestreview{
+    grid-gap: 0;
+  }
+}
 @media (max-width: 800px) {
-.text-container, .information{
-  grid-column: 1/3;
+  .text-container, .information{
+    grid-column: 1/3;
+  }
+  .recommendation img{
+    grid-column: 2;
+    grid-row: 2;
+  }
+  .bestreview:nth-child(even),.bestreview:nth-child(odd){
+    /* grid-column: 1/5; */
+    height: auto;
+  }
+  #more-recommendations{
+    grid-column: 1/5;
+  }
+  .bestpreview{
+    grid-column: 1/3;
+    padding: 1em 10% 0 10%;
+  }
+  .bestreviewdetails{
+    grid-column: 1/3;
+    padding: 1em;
+  }
 }
-.recommendation img{
-  grid-column: 2;
-  grid-row: 2;
-}
+@media (max-width: 550px) {
+  .bestreview:nth-child(even),.bestreview:nth-child(odd){
+    grid-column: 1/5;
+  }
 }

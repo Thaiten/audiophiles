@@ -34,7 +34,7 @@
   margin-left: 5em;
 }
 .navigation a.active{
-  background: var(--first);
+  background: var(--third);
   color: var(--second);
   padding: 0.75em 2em;
   border-radius: 4px;
